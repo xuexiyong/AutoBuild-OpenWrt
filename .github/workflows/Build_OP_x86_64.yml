@@ -65,7 +65,7 @@ jobs:
 
     - name: clash
       run: |
-        cd package/lean
+        cd package
         mkdir openwrt-package
         cd openwrt-package
         git clone https://github.com/frainzy1477/luci-app-clash.git
