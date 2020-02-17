@@ -63,17 +63,6 @@ jobs:
         REPO_BRANCH: master
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
 
-    - name: clash
-      run: |
-        cd package
-        mkdir openwrt-package
-        cd openwrt-package
-        git clone https://github.com/frainzy1477/luci-app-clash.git
-        #git clone https://github.com/hong0980/luci-app-passwall.git
-        git clone https://github.com/rosywrt/luci-theme-rosy.git
-        git clone https://github.com/tzxiaozhen88/luci-app-koolproxyR.git
-        git clone https://github.com/Aslin-Ameng/luci-app-access-control.git
-
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
